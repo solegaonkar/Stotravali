@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Iterator;
+import java.util.NavigableSet;
 import java.util.TreeMap;
 
 /**
@@ -19,6 +20,7 @@ import java.util.TreeMap;
  */
 
 public class DAO {
+	private static DAO instance = new DAO();
 	private TreeMap<String, TreeMap<String, String>> titleMap = null;
 	private Context context;
 
@@ -27,9 +29,11 @@ public class DAO {
 
 	private String text;
 
-	public DAO(Context context) {
-		this.context = context;
-		createMap();
+	public static DAO init(Context context) {
+		instance.context = context;
+		if (instance.titleMap == null)
+			instance.createMap();
+		return instance;
 	}
 
 	private void createMap() {
@@ -51,27 +55,36 @@ public class DAO {
 		}
 	}
 
-	public String getKey1() {
-		return key1;
-	}
-
-	public void setKey1(String key1) {
-		this.key1 = key1;
-		key2 = null;
-	}
-
-	public String getKey2() {
-		return key2;
-	}
-
-	public void setKey2(String key2) {
-		this.key2 = key2;
+	public boolean back() {
 		if (key2 != null) {
+			key2 = null;
+			text = null;
+		} else if (key1 != null){
+			key1 = null;
+		} else {
+			return false;
+		}
+		return true;
+	}
+
+	public void setKey(String key) {
+		if (key1 == null) {
+			key1 = key;
+		} else {
+			key2 = key;
 			try {
 				text = getFileContent(titleMap.get(key1).get(key2));
 			} catch (Exception e) {
 				text = context.getResources().getText(R.string.error).toString();
 			}
+		}
+	}
+
+	public NavigableSet<String> getKeySet() {
+		if (key1 == null) {
+			return titleMap.navigableKeySet();
+		} else {
+			return titleMap.get(key1).navigableKeySet();
 		}
 	}
 

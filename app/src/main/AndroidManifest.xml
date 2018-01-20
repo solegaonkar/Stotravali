@@ -4,20 +4,18 @@
 
 	<application
 		android:allowBackup="true"
-		android:icon="@mipmap/ic_launcher"
+		android:icon="@drawable/s128"
 		android:label="@string/app_name"
-		android:roundIcon="@mipmap/ic_launcher_round"
+		android:roundIcon="@drawable/s128"
 		android:supportsRtl="true"
-		android:theme="@style/AppTheme.NoActionBar">
-		<activity
-			android:name=".activity.ScrollingActivity"
-			android:label="@string/title_activity_scrolling"
-			android:theme="@style/AppTheme.NoActionBar">
+		android:theme="@style/MyTheme">
+		<activity android:name=".activity.MainActivity"
+			android:label="@string/title_activity_scrolling">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
+
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
-
 
 		</activity>
 	</application>

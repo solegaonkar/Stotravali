@@ -1,5 +1,45 @@
 {
-	"sample": {
+	"श्रीमद्भगवद्गीता": {
+		" अर्जुनविषादयोगः": "bhagawatgeeta_00",
+		"०१ अर्जुनविषादयोगः": "bhagawatgeeta_01",
+		"०२ साङ्ख्ययोगः": "bhagawatgeeta_02",
+		"०३ कर्मयोगः": "bhagawatgeeta_03",
+		"०४ ज्ञानकर्मसंन्यासयोगः": "bhagawatgeeta_04",
+		"०५ संन्यासयोगः": "bhagawatgeeta_05",
+		"०६ आत्मसंयमयोगः": "bhagawatgeeta_06",
+		"०७ ज्ञानविज्ञानयोगः": "bhagawatgeeta_07",
+		"०८ अक्षरब्रह्मयोगः": "bhagawatgeeta_08",
+		"०९ राजविद्याराजगुह्ययोगः": "bhagawatgeeta_09",
+		"१० विभूतियोगः": "bhagawatgeeta_10",
+		"११ विश्वरूपदर्शनयोगः": "bhagawatgeeta_11",
+		"१२ भक्तियोगः": "bhagawatgeeta_12",
+		"१३ क्षेत्रक्षेत्रज्ञविभागयोगः": "bhagawatgeeta_13",
+		"१४ गुणत्रयविभागयोगः": "bhagawatgeeta_14",
+		"१५ पुरुषोत्तमयोगः": "bhagawatgeeta_15",
+		"१६ दैवासुरसम्पद्विभागयोगः": "bhagawatgeeta_16",
+		"१७ श्रद्धात्रयविभागयोगः": "bhagawatgeeta_17",
+		"१८ मोक्षसंन्यासयोगः": "bhagawatgeeta_18",
+		"अर्जुनविषादयोगः": "bhagawatgeeta_19"
+	},
+	"sample 2": {
+		"01": "text01"
+	},
+	"sample 3": {
+		"01": "text01"
+	},
+	"sample 4": {
+		"01": "text01"
+	},
+	"sample 5": {
+		"01": "text01"
+	},
+	"sample 6": {
+		"01": "text01"
+	},
+	"sample 7": {
+		"01": "text01"
+	},
+	"sample 8": {
 		"01": "text01"
 	}
 }
